@@ -1,0 +1,32 @@
+using System;
+
+
+namespace testedemesa1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b;
+
+            a = 7;
+
+            b = a - 6;
+
+            int[] Vetor = new int[a];
+
+
+          
+
+            while(b<a) {
+
+                Vetor [b] = b + a;
+
+                Console.WriteLine("Vetor[{0}] = {1}", b, Vetor[b]);
+                b = b + 2;
+
+            }
+            Console.ReadKey();
+        }
+    }
+}
