@@ -1,0 +1,44 @@
+using System;
+
+namespace TesteDeMesa
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            decimal valorFuturo1, valorFuturo2, valorFuturo3, rendimento1, rendimento2, rendimento3;
+
+            decimal valorPresente1 = 1000.00m;
+            decimal valorPresente2 = 5500.00m;
+            decimal valorPresente3 = 12000.00m;
+
+            double taxa1 = 3.00 / 100;
+            double taxa2 = 2.48 / 100;
+            double taxa3 = 2.00 / 100;
+
+
+            valorFuturo1 = valorPresente1 * (decimal)Math.Pow(1 + taxa1, 8.33);
+            valorFuturo2 = valorPresente2 * (decimal)Math.Pow(1 + taxa2, 8.33);
+            valorFuturo3 = valorPresente3 * (decimal)Math.Pow(1 + taxa3, 8.33);
+
+            rendimento1 = valorFuturo1 - valorPresente1;
+            rendimento2 = valorFuturo2 - valorPresente2;
+            rendimento3 = valorFuturo3 - valorPresente3;
+
+            Console.WriteLine(new string('-', 55));
+            Console.WriteLine("|{0, -7} | {1, -7:F2} | {2, -7:F2} | {3, -7:F2} |", "Valor Presente", "Taxa", "Valor Futuro", "Rendimento");
+            Console.WriteLine(new string('-', 55));
+
+            Console.WriteLine("|{0, -7:F2}        | {1, -7:F2} | {2, -7:F2}      | {3, -7:F2}    |", valorPresente1, taxa1 * 100, valorFuturo1, rendimento1);
+            Console.WriteLine(new string('-', 55));
+
+            Console.WriteLine("|{0, -7:F2}        | {1, -7:F2} | {2, -7:F2}      | {3, -7:F2}    |", valorPresente2, taxa2 * 100, valorFuturo2, rendimento2);
+            Console.WriteLine(new string('-', 55));
+
+            Console.WriteLine("|{0, -7:F2}       | {1, -7:F2} | {2, -7:F2}     | {3, -7:F2}    |", valorPresente3, taxa3 * 100, valorFuturo3, rendimento3);
+            Console.WriteLine(new string('-', 55));
+
+            Console.ReadKey();
+        }
+    }
+}
